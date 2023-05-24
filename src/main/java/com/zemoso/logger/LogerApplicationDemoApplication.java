@@ -15,11 +15,10 @@ public class LogerApplicationDemoApplication {
 
 	@GetMapping("/test/{name}")
 	public String greeting(@PathVariable String name){
-		log.info("This will fetches	 the name of person who visits our Company's site");
+		log.info("This will fetches the name of person who visits our Company's site");
 		int numberOfProblem=5;
 		log.info("Difference between SLF4J and Log4J is we can replace concatenation with placeholder ->{}",numberOfProblem);
 		log.info("We can customize our logging mechanism using Logback.xml");
-
 		log.debug("Request {}",name);
 		String response="Hi "+name+" Welcome to Zemoso";
 		log.debug("Response {}",response);
