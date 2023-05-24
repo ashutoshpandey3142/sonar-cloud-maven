@@ -21,13 +21,6 @@ public class LogerApplicationDemoApplication {
 		log.info("We can customize our logging mechanism using Logback.xml");
 
 		log.debug("Request {}",name);
-		if(name.equalsIgnoreCase("test")){
-			try{
-				throw new MyOwnRuntimeException("Exception raised due to enter test");
-			}catch (Exception e){
-				log.debug(e.getMessage());
-			}
-		}
 		String response="Hi "+name+" Welcome to Zemoso";
 		log.debug("Response {}",response);
 		return response;
